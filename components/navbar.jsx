@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import MenuIcon from "@/pages/assets/icons/menu.png";
 import Button from "./button";
+import Link from "next/link";
 
 function Navbar() {
   const [active, setActive] = React.useState(false);
@@ -28,8 +29,28 @@ function Navbar() {
           active ? "flex" : "hidden"
         } md:flex flex-col md:flex-row gap-2 fixed bottom-0 left-0 right-0 md:static bg-black md:bg-transparent h-[90vh] md:h-auto justify-end md:justify-start p-8 md:p-0`}
       >
-        <Button outlined>Log in</Button>
-        <Button>Create Account</Button>
+        <Link
+          href={"https://airhomehotel.com/authentication?login=true"}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Button outlined>Log in</Button>
+        </Link>
+        <Link
+          href={"https://airhomehotel.com/authentication?register=true"}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Button
+            onClick={() =>
+              router.prefetch(
+                "https://airhomehotel.com/authentication?register=true"
+              )
+            }
+          >
+            Create Account
+          </Button>
+        </Link>
       </div>
     </nav>
   );
