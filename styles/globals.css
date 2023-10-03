@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Sequel Sans;
+  src: url(../pages/assets/fonts/SequelSansOTF/SequelSansSemiBoldHead.otf);
+  src: url(../pages/assets/fonts/SequelSansOTF/SequelSansBookBody.otf);
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("//db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.eot");
+  src: url("//db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.svg#Aeonik")
+      format("svg");
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+
+  font-family: Sequel Sans;
+}
+
+@import url(./benefits.css);
+@import url(./footer.css);
